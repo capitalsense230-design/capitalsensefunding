@@ -2,88 +2,335 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Capital Sense Funding – Funding Application</title>
+<title>Capital Sense Funding | Business Financing Application</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
 <style>
-body {font-family: Arial, sans-serif; background:#f4f6f8; margin:0;}
-header {background:#0b3c5d; color:white; text-align:center; padding:25px;}
-header img {max-width:120px; margin-bottom:10px;}
-.container {max-width:1000px; background:white; margin:30px auto; padding:30px; border-radius:6px;}
-h2 {background:#eef2f6; padding:10px; border-left:5px solid #0b3c5d;}
-label {display:block; margin-top:15px; font-weight:bold;}
-input, textarea, select {width:100%; padding:10px; margin-top:5px; border:1px solid #ccc; border-radius:4px;}
-textarea {min-height:90px;}
-.note {font-size:14px; color:#555;}
-button {background:#0b3c5d; color:white; padding:15px; width:100%; font-size:18px; border:none; border-radius:4px; margin-top:30px;}
-footer {text-align:center; padding:15px; font-size:14px; color:gray;}
+:root {
+  --primary:#0b3c5d;
+  --dark:#1c1c1c;
+  --light:#f4f6f8;
+  --border:#dddddd;
+}
+
+* { box-sizing:border-box; }
+
+body {
+  margin:0;
+  font-family:"Segoe UI", Arial, sans-serif;
+  background:var(--light);
+  color:#333;
+}
+
+a { text-decoration:none; color:inherit; }
+
+header {
+  background:#fff;
+  border-bottom:1px solid var(--border);
+}
+
+.top-bar {
+  background:var(--primary);
+  color:#fff;
+  padding:8px 15px;
+  font-size:14px;
+  text-align:center;
+}
+
+.nav {
+  max-width:1200px;
+  margin:auto;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:15px;
+}
+
+.nav img { max-width:120px; }
+
+.nav ul {
+  list-style:none;
+  display:flex;
+  gap:25px;
+  margin:0;
+  padding:0;
+  font-weight:600;
+}
+
+.apply-btn {
+  background:var(--primary);
+  color:#fff;
+  padding:10px 18px;
+  border-radius:4px;
+}
+
+.hero {
+  background:linear-gradient(rgba(11,60,93,.9),rgba(11,60,93,.9)),
+             url('https://images.unsplash.com/photo-1520607162513-77705c0f0d4a') center/cover;
+  color:#fff;
+  padding:80px 15px;
+  text-align:center;
+}
+
+.hero h1 { font-size:42px; margin-bottom:15px; }
+.hero p { font-size:18px; max-width:800px; margin:auto; }
+
+.section {
+  max-width:1200px;
+  margin:60px auto;
+  padding:0 15px;
+}
+
+.section h2 {
+  font-size:30px;
+  margin-bottom:20px;
+  border-left:6px solid var(--primary);
+  padding-left:12px;
+}
+
+.container {
+  max-width:1100px;
+  margin:auto;
+  background:#fff;
+  padding:40px;
+  border-radius:8px;
+}
+
+.form-grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:20px;
+}
+
+label {
+  font-weight:600;
+  display:block;
+  margin-top:15px;
+}
+
+input, textarea, select {
+  width:100%;
+  padding:10px;
+  border:1px solid var(--border);
+  border-radius:4px;
+  margin-top:5px;
+}
+
+textarea { min-height:90px; }
+
+.radio-group {
+  display:flex;
+  gap:20px;
+  margin-top:10px;
+}
+
+.note {
+  font-size:14px;
+  color:#555;
+  margin-top:15px;
+}
+
+button {
+  width:100%;
+  background:var(--primary);
+  color:#fff;
+  border:none;
+  padding:16px;
+  font-size:18px;
+  border-radius:5px;
+  margin-top:40px;
+  cursor:pointer;
+}
+
+footer {
+  background:var(--dark);
+  color:#ccc;
+  padding:50px 15px;
+  margin-top:60px;
+}
+
+.footer-grid {
+  max-width:1200px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:30px;
+}
+
+footer h3 { color:#fff; }
+
+footer p {
+  font-size:14px;
+  line-height:1.6;
+}
+
+.footer-bottom {
+  text-align:center;
+  margin-top:30px;
+  font-size:13px;
+  opacity:.7;
+}
 </style>
 </head>
+
 <body>
+
 <header>
-  <img src="logo.jpg" alt="Capital Sense Funding Logo">
-  <h1>Capital Sense Funding – Funding Application</h1>
-  <p>Please complete all required fields. All information provided will be used solely for funding evaluation purposes.</p>
+  <div class="top-bar">
+    📞 (267) 575-4786 | ✉️ info@capitalsensefunding.com | Call or Email Us Today!
+  </div>
+
+  <div class="nav">
+    <img src="logo.jpg" alt="Capital Sense Funding">
+    <ul>
+      <li>Home</li>
+      <li>Business Loan</li>
+      <li>Accountant / CPA</li>
+      <li>Contact</li>
+      <li><a class="apply-btn" href="#apply">Apply Online</a></li>
+    </ul>
+  </div>
 </header>
 
-<div class="container">
-<form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-<h2>BUSINESS INFORMATION</h2>
-<label>Doing Business As (DBA)*</label><input required>
-<label>Legal / Corporate Name*</label><input required>
-<label>Physical Address*</label><input required>
-<label>City</label><input>
-<label>State</label><input>
-<label>Zip Code</label><input>
-<label>Mailing Address (if different)</label><input>
-<label>Phone</label><input>
-<label>Fax</label><input>
-<label>Cell Phone*</label><input required>
-<label>Email Address*</label><input type="email" required>
-<label>Business Start Date</label><input type="date">
-<label>State of Incorporation</label><input>
-<label>Federal Tax ID (EIN)</label><input>
-<label>Website Address</label><input>
-<label>Products / Services Sold*</label><textarea required></textarea>
-<label>Type of Entity*</label>
-<select required>
-<option>Sole Proprietorship</option>
-<option>Partnership</option>
-<option>S-Corp</option>
-<option>LLC</option>
-<option>Other</option>
-</select>
-<label>Use of Funds*</label><textarea required></textarea>
-<label>Amount Requested ($)*</label><input type="number" required>
+<section class="hero">
+  <h1>Business Financing When You Need It The Most</h1>
+  <p>Flexible business funding solutions with fast decisions and same-day funding available.</p>
+</section>
 
-<h2>OWNERSHIP INFORMATION – APPLICANT #1</h2>
-<label>Full Name*</label><input required>
-<label>Title</label><input>
-<label>Ownership Since</label><input type="date">
-<label>Ownership Percentage (%)</label><input>
-<label>Home Address</label><input>
-<label>City</label><input>
-<label>State</label><input>
-<label>Zip Code</label><input>
-<label>Date of Birth</label><input type="date">
-<label>Home Phone</label><input>
-<label>Cell Phone</label><input>
+<section class="section" id="apply">
+  <h2>Funding Application</h2>
 
-<p class="note">Social Security Numbers are not collected online. Additional verification may be requested securely if needed.</p>
+  <div class="container">
+    <form>
 
-<h2>DECLARATIONS</h2>
-<label>Any State or Federal Tax Liens?</label><select><option>No</option><option>Yes</option></select>
-<label>Filed for bankruptcy?</label><select><option>No</option><option>Yes</option></select>
-<label>Is the business seasonal?</label><select><option>No</option><option>Yes</option></select>
+      <!-- SECTION 1 -->
+      <h2>BUSINESS INFORMATION</h2>
+      <div class="form-grid">
+        <div><label>Doing Business As (DBA)*</label><input required></div>
+        <div><label>Legal / Corporate Name*</label><input required></div>
+        <div><label>Physical Address*</label><input required></div>
+        <div><label>City</label><input></div>
+        <div><label>State</label><input></div>
+        <div><label>Zip Code</label><input></div>
+        <div><label>Mailing Address (if different)</label><input></div>
+        <div><label>Phone</label><input></div>
+        <div><label>Fax</label><input></div>
+        <div><label>Cell Phone*</label><input required></div>
+        <div><label>Email Address*</label><input type="email" required></div>
+        <div><label>Business Start Date</label><input type="date"></div>
+        <div><label>State of Incorporation</label><input></div>
+        <div><label>Federal Tax ID (EIN)</label><input></div>
+        <div><label>Website Address</label><input></div>
+      </div>
 
-<h2>AUTHORIZATION & SIGNATURE</h2>
-<textarea required>I authorize Capital Sense Funding, its agents, assigns, and financial institutions to verify the information provided and obtain reports for evaluating this funding application.</textarea>
-<label>Applicant Full Legal Name*</label><input required>
-<label>Date*</label><input type="date" required>
+      <label>Products / Services Sold*</label>
+      <textarea required></textarea>
 
-<button type="submit">Submit Application</button>
-</form>
-</div>
+      <label>Type of Entity*</label>
+      <div class="radio-group">
+        <label><input type="radio" name="entity" required> Sole Proprietorship</label>
+        <label><input type="radio" name="entity"> Partnership</label>
+        <label><input type="radio" name="entity"> S-Corp</label>
+        <label><input type="radio" name="entity"> LLC</label>
+        <label><input type="radio" name="entity"> Other</label>
+      </div>
 
-<footer>© 2026 Capital Sense Funding – MIT Licensed</footer>
+      <label>Use of Funds*</label>
+      <textarea required></textarea>
+
+      <label>Amount Requested ($)*</label>
+      <input type="number" required>
+
+      <!-- SECTION 2 -->
+      <h2>OWNERSHIP INFORMATION – APPLICANT #1</h2>
+      <div class="form-grid">
+        <div><label>Full Name*</label><input required></div>
+        <div><label>Title</label><input></div>
+        <div><label>Ownership Since</label><input type="date"></div>
+        <div><label>Ownership Percentage (%)</label><input></div>
+        <div><label>Home Address</label><input></div>
+        <div><label>City</label><input></div>
+        <div><label>State</label><input></div>
+        <div><label>Zip Code</label><input></div>
+        <div><label>Date of Birth</label><input type="date"></div>
+        <div><label>Home Phone</label><input></div>
+        <div><label>Cell Phone</label><input></div>
+      </div>
+
+      <p class="note">
+        Social Security Numbers are not collected online. Additional verification may be requested securely if needed.
+      </p>
+
+      <!-- SECTION 4 -->
+      <h2>BUSINESS PROPERTY INFORMATION</h2>
+      <label>Business Property Status</label>
+      <div class="radio-group">
+        <label><input type="radio" name="property"> Rent</label>
+        <label><input type="radio" name="property"> Own</label>
+      </div>
+
+      <div class="form-grid">
+        <div><label>Ownership Since</label><input type="date"></div>
+        <div><label>Monthly Rent / Mortgage Amount</label><input></div>
+        <div><label>Lease Start Date</label><input type="date"></div>
+        <div><label>Lease Expiration Date</label><input type="date"></div>
+        <div><label>Landlord / Mortgage Company Name</label><input></div>
+        <div><label>Contact Name / Account Number</label><input></div>
+        <div><label>Phone</label><input></div>
+        <div><label>Email Address</label><input type="email"></div>
+      </div>
+
+      <!-- SECTION 6 -->
+      <h2>DECLARATIONS</h2>
+      <label>Any State or Federal Tax Liens?</label>
+      <select><option>No</option><option>Yes</option></select>
+
+      <label>Have you ever filed for bankruptcy?</label>
+      <select><option>No</option><option>Yes</option></select>
+
+      <label>Is the business seasonal?</label>
+      <select><option>No</option><option>Yes</option></select>
+
+      <!-- SECTION 7 -->
+      <h2>AUTHORIZATION & SIGNATURE</h2>
+      <textarea required>
+I authorize Capital Sense Funding, its agents, assigns, and financial institutions to verify the information provided and to obtain investigative, credit, and reference reports for the purpose of evaluating this funding application.
+      </textarea>
+
+      <label>Applicant Full Legal Name (Signature)*</label>
+      <input required>
+
+      <label>Date*</label>
+      <input type="date" required>
+
+      <button type="submit">Submit Application</button>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-grid">
+    <div>
+      <h3>Capital Sense Funding</h3>
+      <p>230 S. Broad St, Suite 805<br>Philadelphia, PA 19102</p>
+      <p>Service Area: Nationwide</p>
+    </div>
+    <div>
+      <h3>Contact</h3>
+      <p>Phone: (267) 575-4786</p>
+      <p>Email: info@capitalsensefunding.com</p>
+      <p>Mon–Fri: 8am–9pm<br>Sat: 9am–6pm<br>Sun: 9am–4pm</p>
+    </div>
+    <div>
+      <h3>Values</h3>
+      <p>Professionalism • Customer Service • Education • Transparency</p>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    © 2026 Capital Sense Funding | MIT Licensed
+  </div>
+</footer>
+
 </body>
 </html>
