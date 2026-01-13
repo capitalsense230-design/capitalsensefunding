@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Capital Sense Funding – Funding Application</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial, sans-serif; background:#f4f6f8; margin:0;}
+header {background:#0b3c5d; color:white; text-align:center; padding:25px;}
+header img {max-width:120px; margin-bottom:10px;}
+.container {max-width:1000px; background:white; margin:30px auto; padding:30px; border-radius:6px;}
+h2 {background:#eef2f6; padding:10px; border-left:5px solid #0b3c5d;}
+label {display:block; margin-top:15px; font-weight:bold;}
+input, textarea, select {width:100%; padding:10px; margin-top:5px; border:1px solid #ccc; border-radius:4px;}
+textarea {min-height:90px;}
+.note {font-size:14px; color:#555;}
+button {background:#0b3c5d; color:white; padding:15px; width:100%; font-size:18px; border:none; border-radius:4px; margin-top:30px;}
+footer {text-align:center; padding:15px; font-size:14px; color:gray;}
+</style>
+</head>
+<body>
+<header>
+  <img src="logo.jpg" alt="Capital Sense Funding Logo">
+  <h1>Capital Sense Funding – Funding Application</h1>
+  <p>Please complete all required fields. All information provided will be used solely for funding evaluation purposes.</p>
+</header>
+
+<div class="container">
+<form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+<h2>BUSINESS INFORMATION</h2>
+<label>Doing Business As (DBA)*</label><input required>
+<label>Legal / Corporate Name*</label><input required>
+<label>Physical Address*</label><input required>
+<label>City</label><input>
+<label>State</label><input>
+<label>Zip Code</label><input>
+<label>Mailing Address (if different)</label><input>
+<label>Phone</label><input>
+<label>Fax</label><input>
+<label>Cell Phone*</label><input required>
+<label>Email Address*</label><input type="email" required>
+<label>Business Start Date</label><input type="date">
+<label>State of Incorporation</label><input>
+<label>Federal Tax ID (EIN)</label><input>
+<label>Website Address</label><input>
+<label>Products / Services Sold*</label><textarea required></textarea>
+<label>Type of Entity*</label>
+<select required>
+<option>Sole Proprietorship</option>
+<option>Partnership</option>
+<option>S-Corp</option>
+<option>LLC</option>
+<option>Other</option>
+</select>
+<label>Use of Funds*</label><textarea required></textarea>
+<label>Amount Requested ($)*</label><input type="number" required>
+
+<h2>OWNERSHIP INFORMATION – APPLICANT #1</h2>
+<label>Full Name*</label><input required>
+<label>Title</label><input>
+<label>Ownership Since</label><input type="date">
+<label>Ownership Percentage (%)</label><input>
+<label>Home Address</label><input>
+<label>City</label><input>
+<label>State</label><input>
+<label>Zip Code</label><input>
+<label>Date of Birth</label><input type="date">
+<label>Home Phone</label><input>
+<label>Cell Phone</label><input>
+
+<p class="note">Social Security Numbers are not collected online. Additional verification may be requested securely if needed.</p>
+
+<h2>DECLARATIONS</h2>
+<label>Any State or Federal Tax Liens?</label><select><option>No</option><option>Yes</option></select>
+<label>Filed for bankruptcy?</label><select><option>No</option><option>Yes</option></select>
+<label>Is the business seasonal?</label><select><option>No</option><option>Yes</option></select>
+
+<h2>AUTHORIZATION & SIGNATURE</h2>
+<textarea required>I authorize Capital Sense Funding, its agents, assigns, and financial institutions to verify the information provided and obtain reports for evaluating this funding application.</textarea>
+<label>Applicant Full Legal Name*</label><input required>
+<label>Date*</label><input type="date" required>
+
+<button type="submit">Submit Application</button>
+</form>
+</div>
+
+<footer>© 2026 Capital Sense Funding – MIT Licensed</footer>
+</body>
+</html>
